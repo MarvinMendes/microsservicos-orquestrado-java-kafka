@@ -1,2 +1,25 @@
 server:
   port: 8091
+
+spring.jpa:
+  database: POSTGRESQL
+  hibernate.ddl-auto: create-drop
+  show-sql: true
+
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
+    topic:
+      orchestration: orchestration
+      payment-success: payment-success
+      payment-fail: payment-fail
+    consumer:
+      payment-group: payment-group
+
+spring.datasource:
+  platform: postgres
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://database-2.claei0us2ulm.us-east-2.rds.amazonaws.com/
+  createDatabaseIfNotExist: payment_db
+  username: postgres
+  password: admin123

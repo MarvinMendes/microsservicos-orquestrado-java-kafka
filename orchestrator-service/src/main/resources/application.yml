@@ -1,2 +1,12 @@
 server:
   port: 8080
+
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA-BROKER:localhost:9092}
+    topic:
+      start-saga: start-saga
+      finish-success: finish-success
+      finish-fail: finish-fail
+    consumer:
+      group-id: orchestration-group

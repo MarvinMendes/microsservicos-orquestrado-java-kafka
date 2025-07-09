@@ -1,2 +1,31 @@
 server:
   port: 8092
+
+spring.jpa:
+  database: POSTGRESQL
+  hibernate.ddl-auto: create-drop
+  show-sql: true
+
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA-BROKER:localhost:9092}
+    topic:
+      orchestration: orchestration
+      inventory-success: inventory-success
+      inventory-fail: inventory-fail
+    consumer:
+      group-id: inventory-group
+
+
+  datasource:
+    hikari:
+      data-source-properties:
+        socketTimeout: 20
+
+spring.datasource:
+  platform: postgres
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://database-3.claei0us2ulm.us-east-2.rds.amazonaws.com/
+  createDatabaseIfNotExist: inventory_db
+  username: postgres
+  password: admin123

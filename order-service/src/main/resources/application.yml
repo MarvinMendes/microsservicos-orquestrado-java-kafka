@@ -1,2 +1,19 @@
 server:
   port: 3000
+
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
+    topic:
+      start-saga: start-saga
+      notify-ending: notify-ending
+    consumer:
+      group-id: order-group
+
+  data:
+    mongodb:
+      uri: mongodb+srv://marvinmlopes:JwnoLQYxrAYIzAmf@cluster-order.wery3mj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Order
+      database: Cluster-Order
+
+
+
