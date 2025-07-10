@@ -28,4 +28,4 @@ spring.datasource:
   url: jdbc:postgresql://database-3.claei0us2ulm.us-east-2.rds.amazonaws.com/
   createDatabaseIfNotExist: inventory_db
   username: postgres
-  password: admin123
+  password: 
