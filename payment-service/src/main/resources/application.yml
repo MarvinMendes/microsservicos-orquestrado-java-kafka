@@ -22,4 +22,4 @@ spring.datasource:
   url: jdbc:postgresql://database-2.claei0us2ulm.us-east-2.rds.amazonaws.com/
   createDatabaseIfNotExist: payment_db
   username: postgres
-  password: admin123
+  password: 
