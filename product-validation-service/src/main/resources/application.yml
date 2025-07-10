@@ -24,4 +24,4 @@ spring.datasource:
   driverClassName: org.postgresql.Driver
   url: jdbc:postgresql://database-1.claei0us2ulm.us-east-2.rds.amazonaws.com/postgres
   username: postgres
-  password: admin123
+  password: 
